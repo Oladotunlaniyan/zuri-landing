@@ -4,6 +4,8 @@ import logo from '../src/assets/logo.png';
 import sign from  '../src/assets/signature.png'
 import pine from '../src/assets/pinelogo.png'
 import findr from '../src/assets/findrlogo.png'
+import { ScrollProgress } from './components/eldoraui/scrollprogress';
+import MorphingText from './components/eldoraui/morphingtext';
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -11,14 +13,13 @@ function App() {
 
   return (
     <div className={`min-h-screen transition-colors duration-300 ${isDarkMode ? 'bg-black' : 'bg-gray-50'}`}>
+      <ScrollProgress />
       {/* Background Grid Effect */}
       <div className="fixed inset-0 bg-grid-pattern"></div>
 
       {/* Navigation */}
       <nav className="relative z-10 px-6 py-4 flex justify-between items-center">
         <div className="flex items-center space-x-2">
-          {/* <Building2 className={`w-6 h-6 ${isDarkMode ? 'text-white' : 'text-gray-900'}`} />
-          <span className={`font-bold text-xl ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>ZURI.CORP</span> */}
           <img src= {logo} alt="Zuri logo" className='w-1/2 p-2 sm:w-1/2 ' />
         </div>
         <button
@@ -32,9 +33,13 @@ function App() {
       {/* Hero Section */}
       <main className="relative z-10 container mx-auto px-6 pt-20 pb-12">
         <div className="max-w-4xl">
-          <h1 className={`hero-font text-3xl md:text-5xl font-bold mb-6 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
+          {/* <h1 className={`hero-font text-3xl md:text-5xl font-bold mb-6 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
+          <MorphingText />
             The Future of Innovation, <br /> Engineered.
-          </h1>
+          </h1> */}
+          <h1 className={`hero-font text-3xl md:text-5xl font-bold mb-6 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
+           <MorphingText texts={["The Future of Innovation", "Engineered."]} /> 
+            </h1>
           <p className={`hero-text text-l md:text-1xl mb-4 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
           At Zuri.corp, we aspire to establish a paradigm where innovation takes root <br /> 
           within Africa. Our core objective is to tackle the pressing problems inherent to <br />
@@ -72,7 +77,7 @@ function App() {
                 <img src={pine} className='w-12 h-12' />
                 <h3 className={`text-2xl font-bold hero-text  ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Pine</h3>
               </div>
-              <p className={` mb-6 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'} hero-font font-light`}>
+              <p className={`mb-6 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'} hero-font font-light`}>
               A digital startup ecosystem built 
               for the remote generation.We bring together ambitious founders, builders, and investors
               from around the world into one powerful online platform.
