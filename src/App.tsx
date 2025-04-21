@@ -69,7 +69,7 @@ function App() {
       {/* Navigation */}
       <nav className="relative z-10 px-4 sm:px-6 py-4 flex justify-between items-center backdrop-blur-sm">
         <div className="flex items-center">
-          <img src={logo} alt="Zuri logo" className="w-46 sm:w-40 p-2 sm:p-3 transition-transform duration-300 hover:scale-105" />
+          <img src={logo} alt="Zuri logo" className="w-44 sm:w-52 p-2 sm:p-3 transition-transform duration-300 hover:scale-105" />
         </div>
         <button
           onClick={() => setIsDarkMode(!isDarkMode)}
@@ -86,7 +86,7 @@ function App() {
       <main className="relative z-10 container mx-auto px-4 sm:px-6 pt-10 sm:pt-20 pb-12">
         <div 
           id="hero-section"
-          className={`max-w-4xl  transition-all duration-1000 transform ${
+          className={`max-w-4xl transition-all duration-1000 transform ${
             isVisible.hero ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
           }`}
         >
