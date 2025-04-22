@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Moon, Sun, ArrowRight } from 'lucide-react';
 import logo from '../src/assets/logo.png';
 import sign from '../src/assets/signature.png';
+import sign2 from '../src/assets/signature2.png'
 import pine from '../src/assets/pinelogo.png';
 import findr from '../src/assets/findrlogo.png';
 import { ScrollProgress } from './components/eldoraui/scrollprogress';
@@ -53,7 +54,6 @@ function App() {
     };
   }, []);
 
-  // Theme toggle with system preference detection
   useEffect(() => {
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     setIsDarkMode(prefersDark);
@@ -61,10 +61,11 @@ function App() {
 
   return (
     <div className={`min-h-screen transition-colors duration-500 ${isDarkMode ? 'bg-black' : 'bg-gray-50'}`}>
+      
       <ScrollProgress className={isDarkMode ? "bg-gray-50" : "bg-black"} />
       
       {/* Background Grid Effect with animation */}
-      <div className={`fixed inset-0 bg-grid-pattern opacity-20 transition-opacity duration-500 ${isDarkMode ? 'opacity-30' : 'opacity-10'}`}></div>
+      <div className={`fixed inset-0 bg-grid-pattern opacity-40 transition-opacity duration-500 ${isDarkMode ? 'opacity-70' : 'opacity-50'}`}></div>
 
       {/* Navigation */}
       <nav className="relative z-10 px-4 sm:px-6 py-4 flex justify-between items-center backdrop-blur-sm">
@@ -115,18 +116,16 @@ function App() {
               <span>{showMore ? 'Show less' : 'more'}</span>
             </button>
             <img 
-              src={sign} 
-              alt="Signature" 
-              className={`w-full sm:w-2/3 md:w-1/2 py-2 transition-all duration-300 ${
-                isDarkMode ? 'filter-none' : 'bg-gray-300'
-              }`}
+              src={isDarkMode ? sign : sign2}
+              alt="Signature"
+              className={`w-full sm:w-2/3 md:w-1/2 py-2 transition-all duration-300`}
             />
           </div>
         </div>
         
         {/* Products Section */}
         <div id="products-section" className="mt-20 sm:mt-32">
-          <div className={`building-section text-center py-6 sm:py-10 transition-all duration-1000 transform ${
+          <div className={`building-section text-left px-3 py-6 sm:py-10 transition-all duration-1000 transform ${
             isVisible.products ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
           }`}>
             <h2 className={`hero-font text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
