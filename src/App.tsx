@@ -124,11 +124,11 @@ function App() {
         </div>
         
         {/* Products Section */}
-        <div id="products-section" className="mt-20 sm:mt-32">
+        <div id="products-section" className="py-7 sm:py-10">
           <div className={`building-section text-left px-3 py-6 sm:py-10 transition-all duration-1000 transform ${
             isVisible.products ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
           }`}>
-            <h2 className={`hero-font text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
+            <h2 className={`hero-text text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-3 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
               Here's what we are building
             </h2>
           </div>
