@@ -68,20 +68,25 @@ function App() {
       <div className={`fixed inset-0 bg-grid-pattern opacity-40 transition-opacity duration-500 ${isDarkMode ? 'opacity-70' : 'opacity-50'}`}></div>
 
       {/* Navigation */}
-      <nav className="relative z-10 px-4 sm:px-6 py-4 flex justify-between items-center backdrop-blur-sm">
-        <div className="flex items-center">
-          <img src={logo} alt="Zuri logo" className="w-44 sm:w-52 p-2 sm:p-3 transition-transform duration-300 hover:scale-105" />
-        </div>
-        <button
-          onClick={() => setIsDarkMode(!isDarkMode)}
-          className={`p-2 rounded-full transition-all duration-300 transform hover:scale-110 ${
-            isDarkMode ? 'bg-gray-800 text-yellow-400 hover:bg-gray-700' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-          }`}
-          aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
-        >
-          {isDarkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-        </button>
-      </nav>
+      <nav className="relative z-10 px-4 sm:px-6 py-6 flex justify-between items-center backdrop-blur-sm">
+      <div className="flex items-center">
+        <img 
+          src={logo} 
+          alt="Zuri logo" 
+          className="w-52  transition-transform duration-300 hover:scale-105" 
+        />
+      </div>
+      
+      <button
+        onClick={() => setIsDarkMode(!isDarkMode)}
+        className={`p-2 mt-[-20px] rounded-full transition-all duration-300 transform hover:scale-110 ${
+          isDarkMode ? 'bg-gray-800 text-yellow-400 hover:bg-gray-700' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+        }`}
+        aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
+      >
+        {isDarkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+      </button>
+    </nav>
 
       {/* Hero Section */}
       <main className="relative z-10 container mx-auto px-4 sm:px-6 pt-10 sm:pt-20 pb-12">
@@ -118,17 +123,17 @@ function App() {
             <img 
               src={isDarkMode ? sign : sign2}
               alt="Signature"
-              className={`w-full sm:w-2/3 md:w-1/2 py-2 transition-all duration-300`}
+              className={`w-[200px] sm:w-[250px] py-2 transition-all duration-300`}
             />
           </div>
         </div>
         
         {/* Products Section */}
-        <div id="products-section" className="py-7 sm:py-10">
+        <div id="products-section" className="py-2 sm:py-5">
           <div className={`building-section text-left px-3 py-6 sm:py-10 transition-all duration-1000 transform ${
             isVisible.products ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
           }`}>
-            <h2 className={`hero-text text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-3 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
+            <h2 className={`text-left hero-text text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-3 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
               Here's what we are building
             </h2>
           </div>
@@ -176,16 +181,18 @@ function App() {
       </main>
 
       {/* Footer */}
-      <footer className="relative z-10 mt-20 border-t border-gray-800">
-        <div className="container mx-auto px-4 sm:px-6 py-8">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
-            <div className="flex flex-wrap justify-center md:justify-start gap-4 sm:gap-6 md:gap-8">
+      {/* <footer className="relative z-10 border-t border-gray-800"> */}
+        <div className="container mx-auto">
+
+          <div className="grid grid-cols-2 gap-4 md:flex-row justify-evenly items-center space-y-6 md:space-y-0">
+            <div className="flex flex-wrap justify-center md:justify-start gap-4 sm:gap-6 md:gap-8 sm:p-10 sm:bg-white sm:rounded-3xl">
               <a href="#" className={`${isDarkMode ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors duration-300`}>About us</a>
               <a href="#" className={`${isDarkMode ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors duration-300`}>Services</a>
               <a href="#" className={`${isDarkMode ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors duration-300`}>Careers</a>
               <a href="#" className={`${isDarkMode ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors duration-300`}>Products</a>
             </div>
-            <div className="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
+
+            <div className="flex flex-wrap sm:flex-row items-center gap-3 w-full sm:w-auto sm:bg-white sm:p-10 sm:rounded-3xl">
               <input
                 type="email"
                 placeholder="Enter your email address"
@@ -199,7 +206,7 @@ function App() {
             </div>
           </div>
         </div>
-      </footer>
+      {/* </footer> */}
     </div>
   );
 }
