@@ -181,32 +181,31 @@ function App() {
       </main>
 
       {/* Footer */}
-      {/* <footer className="relative z-10 border-t border-gray-800"> */}
-        <div className="container mx-auto">
-
-          <div className="grid grid-cols-2 gap-4 md:flex-row justify-evenly items-center space-y-6 md:space-y-0">
-            <div className="flex flex-wrap justify-center md:justify-start gap-4 sm:gap-6 md:gap-8 sm:p-10 sm:bg-white sm:rounded-3xl">
-              <a href="#" className={`${isDarkMode ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors duration-300`}>About us</a>
-              <a href="#" className={`${isDarkMode ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors duration-300`}>Services</a>
-              <a href="#" className={`${isDarkMode ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors duration-300`}>Careers</a>
-              <a href="#" className={`${isDarkMode ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors duration-300`}>Products</a>
-            </div>
-
-            <div className="flex flex-wrap sm:flex-row items-center gap-3 w-full sm:w-auto sm:bg-white sm:p-10 sm:rounded-3xl">
-              <input
-                type="email"
-                placeholder="Enter your email address"
-                className={`px-4 py-2 rounded-lg w-full sm:w-auto ${
-                  isDarkMode ? 'bg-gray-800 text-white' : 'bg-gray-200 text-gray-900'
-                } focus:outline-none focus:ring-2 focus:ring-lime-400 transition-all duration-300`}
-              />
-              <button className="px-6 py-2 bg-lime-400 text-gray-900 rounded-lg hover:bg-lime-300 transition-colors duration-300 w-full sm:w-auto">
-                Subscribe
-              </button>
-            </div>
+      <footer className="bg-gray-900 text-white py-8">
+      <div className="container mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-between items-center">
+          {/* Links Section */}
+          <div className="flex flex-wrap justify-center md:justify-start gap-6">
+            <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">About us</a>
+            <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">Services</a>
+            <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">Careers</a>
+            <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">Products</a>
+          </div>
+          
+          {/* Subscription Section */}
+          <div className="flex flex-col sm:flex-row items-center justify-center md:justify-end gap-4 p-3">
+            <input
+              type="email"
+              placeholder="Enter email address"
+              className="px-4 py-2 rounded-lg w-full sm:w-64 bg-white text-gray-800 focus:outline-none"
+            />
+            <button className="px-6 py-2 bg-lime-400 text-gray-900 rounded-lg hover:bg-lime-300 transition-colors duration-300 w-full sm:w-auto">
+              Subscribe
+            </button>
           </div>
         </div>
-      {/* </footer> */}
+      </div>
+    </footer>
     </div>
   );
 }
