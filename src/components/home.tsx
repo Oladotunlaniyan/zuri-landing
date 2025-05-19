@@ -73,7 +73,7 @@ function Home() {
           }`}
         >
           <h1
-            className={`hero-font text-3xl md:text-4xl lg:text-5xl font-bold mb-2 ${
+            className={`hero-font text-3xl md:text-4xl lg:text-5xl font-bold mb-2 mt-6 ${
               isDarkMode ? "text-white" : "text-gray-900"
             }`}
           >
