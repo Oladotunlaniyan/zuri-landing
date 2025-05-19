@@ -33,7 +33,7 @@ export default function Footer() {
 									to="/products"
 									className="z-10 text-gray-400 transition-colors duration-300 cursor-pointer hover:text-white min-w-fit"
 								>
-									products
+									Products
 								</Link>
 							</div>
 						</div>
@@ -51,7 +51,7 @@ export default function Footer() {
 					</div> */}
 				</div>
 				<div className="w-full text-center text-gray-600">
-					<p>copyright &copy; {new Date().getFullYear()} zuri.corp</p>
+					<p style="font-size: 10px;">copyright &copy; {new Date().getFullYear()} zuri.corp</p>
 				</div>
 			</div>
 		</footer>
