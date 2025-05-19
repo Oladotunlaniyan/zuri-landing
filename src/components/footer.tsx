@@ -7,9 +7,9 @@ export default function Footer() {
 	
 	return (
 		<footer className={`py-5 text-white ${ isDarkMode ? "bg-gray-800" : "bg-gray-900"} rounded-xl`}>
-			<div className="container mx-auto">
-				<div className="grid items-center justify-between grid-cols-1 gap-8 md:grid-cols-2">
-					<div className="flex flex-wrap justify-center gap-6 md:justify-start">
+			<div className="container mx-auto space-y-3">
+				<div className="grid items-center justify-between grid-cols-1 gap-8 md:grid-row-1">
+					<div className="flex flex-wrap justify-center gap-6">
 						<div className="flex flex-col items-center justify-center gap-6 md:flex-row">
 							<img
 								src={logo}
@@ -38,8 +38,8 @@ export default function Footer() {
 							</div>
 						</div>
 					</div>
-
-					<div className="z-10 flex flex-col items-center justify-center gap-4 p-3 sm:flex-row md:justify-end">
+					{/* Might include this in the future */}
+					{/* <div className="z-10 flex flex-col items-center justify-center gap-4 p-3 sm:flex-row md:justify-end">
 						<input
 							type="email"
 							placeholder="Enter email address"
@@ -48,11 +48,11 @@ export default function Footer() {
 						<button className="w-full px-6 py-2 text-gray-900 transition-colors duration-300 rounded-lg bg-lime-400 hover:bg-lime-300 sm:w-auto">
 							Subscribe
 						</button>
-					</div>
+					</div> */}
 				</div>
-					<div className="w-full -mb-3 text-center">
-						<p>copyright &copy; {new Date().getFullYear()} zuri.corp All rights reserved</p>
-					</div>
+				<div className="w-full text-center text-gray-600">
+					<p>copyright &copy; {new Date().getFullYear()} zuri.corp All rights reserved</p>
+				</div>
 			</div>
 		</footer>
 	);
