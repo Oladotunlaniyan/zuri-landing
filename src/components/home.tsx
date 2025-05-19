@@ -11,7 +11,7 @@ import { useThemeContext } from "../context/ThemeContext";
 
 function Home() {
   const { isDarkMode } = useThemeContext();
-  const [showMore, setShowMore] = useState(false);
+  // const [showMore, setShowMore] = useState(false);
   const [isVisible, setIsVisible] = useState({
     hero: false,
     products: false,
@@ -79,7 +79,7 @@ function Home() {
           >
             The Future of Innovation
           </h1>
-          <div className="flex w-full mb-0">
+          <div className="flex w-full mb-2">
             <MorphingText
               className={`ml-0 hero-font text-3xl md:text-4xl lg:text-5xl font-bold text-left ${
                 isDarkMode ? "text-white" : "text-gray-900"
@@ -94,7 +94,7 @@ function Home() {
             />
           </div>
           <p
-            className={`hero-text text-base md:text-lg mb-4 -mt-5 ${
+            className={`hero-text text-base md:text-lg mb-2 ${
               isDarkMode ? "text-gray-300" : "text-gray-700"
             }`}
           >
@@ -104,29 +104,15 @@ function Home() {
             and clarity, designing comprehensive solutions that reflect the
             real-world complexities of the environments we serve.
           </p>
-          {showMore && (
-            <p
-              className={`hero-text text-base md:text-lg mb-4 animate-fadeIn ${
-                isDarkMode ? "text-gray-300" : "text-gray-700"
-              }`}
-            >
-              While crafting compelling experiences, zuri.corp serves as the
+          <p
+            className={`hero-text text-base md:text-lg mb-4 ${
+              isDarkMode ? "text-gray-300" : "text-gray-700"
+            }`}>
+            While crafting compelling experiences, zuri.corp serves as the
               launchpad for mission-driven startups built to make a lasting
               impact across the African continent and beyond.
-            </p>
-          )}
-
-          <div className="flex flex-col space-y-6">
-            <button
-              onClick={() => setShowMore(!showMore)}
-              className={`flex items-center space-x-2 text-lg hero-font transition-colors duration-300 ${
-                isDarkMode
-                  ? "text-lime-400 hover:text-lime-300"
-                  : "text-lime-600 hover:text-lime-700"
-              }`}
-            >
-              <span>{showMore ? "Show less" : "more"}</span>
-            </button>
+          </p>
+          <div className="flex">
             <img
               src={isDarkMode ? sign : sign2}
               alt="Signature"
