@@ -33,14 +33,14 @@ export default function Header() {
 						<img
 							src={logo}
 							alt="Zuri logo"
-							className="transition-transform duration-300 w-52 hover:scale-105"
+							className="w-40 transition-transform duration-300 h-9 hover:scale-105"
 						/>
 					</Link>
 				</div>
 
 				<button
 					onClick={() => setIsDarkMode(!isDarkMode)}
-					className={`p-2 mt-[-20px] rounded-full transition-all duration-300 transform hover:scale-110 ${
+					className={`p-2 rounded-full transition-all duration-300 transform hover:scale-110 ${
 						isDarkMode
 							? "bg-gray-800 text-yellow-400 hover:bg-gray-700"
 							: "bg-gray-100 text-gray-600 hover:bg-gray-200"
@@ -50,7 +50,7 @@ export default function Header() {
 					}
 				>
 					{isDarkMode ? (
-						<Sun className="w-5 h-5" />
+						<Sun className="w-6 h-6" />
 					) : (
 						<Moon className="w-5 h-5" />
 					)}

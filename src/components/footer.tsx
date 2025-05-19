@@ -1,12 +1,14 @@
 import { Link } from "react-router";
 import logo from "../assets/logo.png";
+import { useThemeContext } from "../context/ThemeContext";
 
 export default function Footer() {
+	const { isDarkMode } = useThemeContext();
+	
 	return (
-		<footer className="py-8 text-white bg-gray-900">
+		<footer className={`py-5 text-white ${ isDarkMode ? "bg-gray-800" : "bg-gray-900"} rounded-xl`}>
 			<div className="container mx-auto">
 				<div className="grid items-center justify-between grid-cols-1 gap-8 md:grid-cols-2">
-					{/* Links Section */}
 					<div className="flex flex-wrap justify-center gap-6 md:justify-start">
 						<div className="flex flex-col items-center justify-center gap-6 md:flex-row">
 							<img
@@ -37,7 +39,6 @@ export default function Footer() {
 						</div>
 					</div>
 
-					{/* Subscription Section */}
 					<div className="z-10 flex flex-col items-center justify-center gap-4 p-3 sm:flex-row md:justify-end">
 						<input
 							type="email"
@@ -49,6 +50,9 @@ export default function Footer() {
 						</button>
 					</div>
 				</div>
+					<div className="w-full -mb-3 text-center">
+						<p>copyright &copy; {new Date().getFullYear()} zuri.corp All rights reserved</p>
+					</div>
 			</div>
 		</footer>
 	);
