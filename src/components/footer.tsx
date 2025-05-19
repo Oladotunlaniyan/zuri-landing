@@ -51,7 +51,7 @@ export default function Footer() {
 					</div> */}
 				</div>
 				<div className="w-full text-center text-gray-600">
-					<p>copyright &copy; {new Date().getFullYear()} zuri.corp</p>
+					<p style="font-size: 10px;">copyright &copy; {new Date().getFullYear()} zuri.corp</p>
 				</div>
 			</div>
 		</footer>
