@@ -21,7 +21,7 @@ export default function Footer() {
 									to="/about-us"
 									className="z-10 text-gray-400 transition-colors duration-300 cursor-pointer hover:text-white min-w-fit"
 								>
-									About us
+									About
 								</Link>
 								<Link
 									to="/careers"
@@ -33,7 +33,7 @@ export default function Footer() {
 									to="/products"
 									className="z-10 text-gray-400 transition-colors duration-300 cursor-pointer hover:text-white min-w-fit"
 								>
-									zuri.corp products
+									products
 								</Link>
 							</div>
 						</div>
