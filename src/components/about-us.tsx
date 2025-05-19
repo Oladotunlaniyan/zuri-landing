@@ -126,11 +126,11 @@ export default function AboutUs() {
 					initial="hidden"
 					animate="visible"
 					variants={staggerContainer}
-					className="container relative z-10 max-w-5xl px-4 pt-10 pb-20 mx-auto sm:px-6 md:px-8 lg:px-12"
+					className="container relative z-10 max-w-5xl px-4 pt-6 pb-20 mx-auto sm:px-6 md:px-8 lg:px-12"
 				>
-					<motion.div variants={fadeIn} className="mb-16 text-center">
+					<motion.div variants={fadeIn} className="mb-6 text-center">
 						<h1
-							className={`text-4xl md:text-5xl font-bold mb-6 ${
+							className={`text-4xl md:text-5xl font-bold mb-2 ${
 								isDarkMode ? "text-white" : "text-gray-900"
 							}`}
 						>
@@ -142,11 +142,11 @@ export default function AboutUs() {
 							transition={{ delay: 0.3, duration: 0.8 }}
 							className={`h-1 mx-auto ${
 								isDarkMode ? "bg-lime-500" : "bg-lime-600"
-							} rounded-full mb-8`}
+							} rounded-full mb-2`}
 						/>
 					</motion.div>
 
-					<motion.div variants={fadeIn} className="max-w-3xl mx-auto mb-16">
+					<motion.div variants={fadeIn} className="max-w-3xl mx-auto mb-8">
 						<div
 							className={`prose lg:prose-lg ${
 								isDarkMode
@@ -154,20 +154,20 @@ export default function AboutUs() {
 									: "text-gray-700 prose-headings:text-gray-900"
 							} mx-auto`}
 						>
-							<p className="mb-6 text-lg leading-relaxed md:text-xl">
+							<p className="mb-2 text-lg leading-relaxed md:text-xl">
 								When we started zuri.corp, we weren't interested in chasing
 								trends — we were interested in solving{" "}
 								<span className="font-semibold">real problems</span>. Problems
 								that impact people. Problems that matter.
 							</p>
 
-							<p className="mb-6 text-lg leading-relaxed md:text-xl">
+							<p className="mb-2 text-lg leading-relaxed md:text-xl">
 								From the beginning, we've been guided by a simple principle:
 								build things that are meaningful, beautiful, and useful. Things
 								that move the world forward.
 							</p>
 
-							<p className="mb-6 text-lg leading-relaxed md:text-xl">
+							<p className="mb-2 text-lg leading-relaxed md:text-xl">
 								zuri.corp is a growing collective of companies, each
 								independently led by the best minds we can find. Right now,
 								we're focused on building our core software ventures:{" "}
@@ -181,7 +181,7 @@ export default function AboutUs() {
 								. But this is just the beginning.
 							</p>
 
-							<p className="mb-6 text-lg leading-relaxed md:text-xl">
+							<p className="mb-2 text-lg leading-relaxed md:text-xl">
 								In the future, we'll explore other industries where we believe
 								we can make a meaningful difference — bringing the zuri.corp
 								philosophy to bold new spaces. Some ideas might seem
@@ -192,7 +192,7 @@ export default function AboutUs() {
 								and having the courage to build toward it.
 							</p>
 
-							<p className="mb-6 text-lg leading-relaxed md:text-xl">
+							<p className="mb-2 text-lg leading-relaxed md:text-xl">
 								By structuring our ventures independently, we give each one the
 								freedom to operate with clarity and purpose. Our role is to
 								empower them — not control them. That's why we give each venture
@@ -200,26 +200,36 @@ export default function AboutUs() {
 								the same high standard: transparency, intention, and impact.
 							</p>
 
-							<p className="mt-8 mb-6 text-xl font-semibold text-center md:text-2xl">
+							<p className="mt-2 mb-2 text-xl font-semibold text-left md:text-2xl">
 								This isn't just about business. It's about making things that
 								last.
 							</p>
 
-							<p className="text-lg text-center md:text-xl">
+							<p className="text-lg text-left md:text-xl">
 								We're here to build what matters — and we're just getting
 								started.
 							</p>
 						</div>
 					</motion.div>
 
-					<motion.div variants={fadeIn} className="mb-12">
-						<h2
-							className={`text-2xl md:text-3xl font-bold text-center mb-12 ${
+					<motion.div variants={fadeIn} className="mb-4">
+						<motion.div variants={fadeIn} className="mb-8 text-center">
+						<h3
+							className={`text-4xl md:text-5xl font-bold mb-2 ${
 								isDarkMode ? "text-white" : "text-gray-900"
 							}`}
 						>
 							Our Core Principles
-						</h2>
+						</h3>
+						<motion.div
+							initial={{ width: 0 }}
+							animate={{ width: "120px" }}
+							transition={{ delay: 0.3, duration: 0.8 }}
+							className={`h-1 mx-auto ${
+								isDarkMode ? "bg-lime-500" : "bg-lime-600"
+							} rounded-full mb-2`}
+						/>
+					</motion.div>
 
 						<div className="grid grid-cols-1 gap-6 md:grid-cols-2">
 							{features.map((feature, index) => (

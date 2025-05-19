@@ -166,23 +166,31 @@ export default function Products() {
 				initial="hidden"
 				animate="visible"
 				variants={staggerContainer}
-				className="container relative z-10 flex flex-col items-center max-w-6xl px-4 pt-10 pb-20 mx-auto sm:px-6 sm:pt-20"
+				className="container relative z-10 flex flex-col items-center max-w-6xl px-4 pt-4 pb-20 mx-auto sm:px-6 sm:pt-7"
 			>
-				<motion.div variants={fadeIn} custom={0} className="mb-12 text-center">
+				<motion.div variants={fadeIn} custom={0} className="mb-5 text-center">
 					<motion.h1
 						initial={{ opacity: 0, y: -20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.7, ease: "easeOut" }}
-						className={`text-3xl sm:text-4xl md:text-5xl font-bold mb-6 ${
+						className={`text-3xl sm:text-4xl md:text-5xl font-bold mb-2 ${
 							isDarkMode ? "text-white" : "text-gray-800"
 						}`}
 					>
 						Products with Purpose. Ventures with Vision.
 					</motion.h1>
+					<motion.div
+							initial={{ width: 0 }}
+							animate={{ width: "150px" }}
+							transition={{ delay: 0.3, duration: 0.8 }}
+							className={`h-1 mx-auto ${
+								isDarkMode ? "bg-lime-500" : "bg-lime-600"
+							} rounded-full mb-3`}
+					/>
 
 					<motion.div variants={fadeIn} custom={0.5}>
 						<p
-							className={`hero-text text-base md:text-lg mb-12 max-w-3xl mx-auto ${
+							className={`hero-text text-left text-base md:text-lg mb-2 max-w-3xl mx-auto ${
 								isDarkMode ? "text-gray-300" : "text-gray-700"
 							}`}
 						>

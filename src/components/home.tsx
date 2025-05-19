@@ -36,7 +36,7 @@ function Home() {
       }
     };
 
-    function isElementInViewport(el) {
+    function isElementInViewport(el: HTMLElement) {
       const rect = el.getBoundingClientRect();
       return (
         rect.top <=
@@ -63,8 +63,7 @@ function Home() {
     >
       <Header />
 
-      {/* Hero Section */}
-      <main className="container relative z-10 px-4 pt-10 pb-12 mx-auto sm:px-6 sm:pt-20">
+      <main className="container relative z-10 px-4 pt-3 pb-12 mx-auto sm:px-6 sm:pt-4">
         <div
           id="hero-section"
           className={`flex flex-col text-left max-w-4xl transition-all duration-1000 transform ${
@@ -80,7 +79,7 @@ function Home() {
           >
             The Future of Innovation
           </h1>
-          <div className="flex w-full mb-6">
+          <div className="flex w-full mb-0">
             <MorphingText
               className={`ml-0 hero-font text-3xl md:text-4xl lg:text-5xl font-bold text-left ${
                 isDarkMode ? "text-white" : "text-gray-900"
@@ -95,7 +94,7 @@ function Home() {
             />
           </div>
           <p
-            className={`hero-text text-base md:text-lg mb-4 ${
+            className={`hero-text text-base md:text-lg mb-4 -mt-5 ${
               isDarkMode ? "text-gray-300" : "text-gray-700"
             }`}
           >
@@ -136,7 +135,6 @@ function Home() {
           </div>
         </div>
 
-        {/* Products Section */}
         <div id="products-section" className="py-2 sm:py-5">
           <div
             className={`building-section text-left px-3 py-6 sm:py-10 transition-all duration-1000 transform ${

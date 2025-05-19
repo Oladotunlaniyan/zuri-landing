@@ -195,26 +195,34 @@ export default function Careers() {
 				</Link>
 			</motion.div>
 			<motion.main
-				className="container relative z-10 max-w-4xl px-4 py-16 mx-auto sm:px-6 lg:px-8"
+				className="container relative z-10 max-w-4xl px-4 py-2 mx-auto sm:px-6 lg:px-8"
 				initial={{ opacity: 0, y: 20 }}
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.5 }}
 			>
 				<motion.div
-					className="mb-16 text-center"
+					className="text-center mb-7"
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
 					transition={{ delay: 0.2, duration: 0.5 }}
 				>
 					<h1
-						className={`text-4xl md:text-5xl font-bold mb-6 ${
+						className={`text-4xl md:text-5xl font-bold mb-2 ${
 							isDarkMode ? "text-white" : "text-gray-900"
 						}`}
 					>
 						Careers
 					</h1>
+					<motion.div
+							initial={{ width: 0 }}
+							animate={{ width: "120px" }}
+							transition={{ delay: 0.3, duration: 0.8 }}
+							className={`h-1 mx-auto ${
+								isDarkMode ? "bg-lime-500" : "bg-lime-600"
+							} rounded-full mb-4`}
+						/>
 					<p
-						className={`text-lg md:text-xl max-w-2xl mx-auto ${
+						className={`text-left text-lg md:text-xl max-w-2xl mx-auto ${
 							isDarkMode ? "text-gray-300" : "text-gray-700"
 						}`}
 					>
