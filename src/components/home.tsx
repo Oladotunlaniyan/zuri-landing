@@ -94,7 +94,7 @@ function Home() {
             />
           </div>
           <p
-            className={`hero-text text-base md:text-lg mb-2 ${
+            className={`font-serif text-base md:text-lg mb-2 ${
               isDarkMode ? "text-gray-300" : "text-gray-700"
             }`}
           >
