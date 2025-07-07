@@ -94,7 +94,7 @@ function Home() {
             />
           </div>
           <p
-            className={`font-serif text-base md:text-lg mb-2 ${
+            className={`font-sans text-base md:text-lg mb-2 ${
               isDarkMode ? "text-gray-300" : "text-gray-700"
             }`}
           >
@@ -105,7 +105,7 @@ function Home() {
             real-world complexities of the environments we serve.
           </p>
           <p
-            className={`hero-text text-base md:text-lg mb-4 ${
+            className={`font-sans text-base md:text-lg mb-4 ${
               isDarkMode ? "text-gray-300" : "text-gray-700"
             }`}>
             While crafting compelling experiences, zuri.corp serves as the
