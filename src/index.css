@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:wght@400&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -15,16 +15,14 @@ body {
 .hero-text {
   font-family: "Poppins", sans-serif;
   /* font-weight: 400; */
-  font-style: normal;
-}
-.bg-grid-pattern {
-  background-image: linear-gradient(rgba(128, 128, 128, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(128, 128, 128, 0.1) 1px, transparent 1px);
-  background-size: 20px 20px;
+  /* font-style: normal; */
 }
 
-.animate-fade-in {
-  animation: fadeIn 0.5s ease-in;
+.bg-grid-pattern {
+  background-image:
+    linear-gradient(rgba(128, 128, 128, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(128, 128, 128, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
 }
 
 @keyframes fadeIn {
@@ -38,20 +36,19 @@ body {
   }
 }
 
-.animate-fadeIn {
+/* Only one .animate-fade-in needed, unified timing function */
+.animate-fade-in {
   animation: fadeIn 0.5s ease-in-out forwards;
 }
 
-.animate-fade-in {
-  animation: fadeIn 0.5s ease-in;
-}
-
+/* Custom utility classes */
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
 
+/* Color variables and dark mode */
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -125,38 +122,32 @@ body {
 }
 
 @layer base {
-  * {
+  /* * {
     @apply border-border;
-  }
+  } */
   body {
     @apply bg-background text-foreground;
   }
 }
 
-/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
 }
-
 ::-webkit-scrollbar-track {
   background: rgba(0, 0, 0, 0.1);
 }
-
 ::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 3px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.3);
 }
 
-/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-/* Ensure content appears above texture */
 main {
   position: relative;
   z-index: 2;
@@ -166,11 +157,9 @@ nav {
   z-index: 50;
 }
 
-/* Additional texture for sections */
 section {
   position: relative;
 }
-
 section > * {
   position: relative;
   z-index: 2;
