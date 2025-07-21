@@ -11,7 +11,7 @@ export default function Header() {
 
 	return (
 		<div>
-			<ScrollProgress className={isDarkMode ? "bg-gray-50" : "bg-black"} />
+			<ScrollProgress className={isDarkMode ? "bg-gray-50" : "bg-[#0C0C16]/90"} />
 
 			{/* Navigation */}
 			<nav
