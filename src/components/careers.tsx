@@ -60,8 +60,22 @@ const jobPostings = [
 	},
 ];
 
+type Job = {
+    id: string;
+    title: string;
+    location: string;
+    description: string;
+    requirements: string[];
+};
+
+type JobCardProps = {
+    job: Job;
+    isOpen: boolean;
+    toggleOpen: () => void;
+};
+
 // Reusable JobCard component for each job posting
-const JobCard = ({ job, isOpen, toggleOpen }) => {
+const JobCard = ({ job, isOpen, toggleOpen }: JobCardProps) => {
 	const { isDarkMode } = useThemeContext();
 
 	return (
@@ -161,9 +175,9 @@ const JobCard = ({ job, isOpen, toggleOpen }) => {
 export default function Careers() {
 	const { isDarkMode } = useThemeContext();
 	const { previousUrl } = usePreviousUrlContext();
-	const [openJobId, setOpenJobId] = useState(null);
+	const [openJobId, setOpenJobId] = useState<string | null>(null);
 
-	const toggleJob = (jobId) => {
+	const toggleJob = (jobId: string) => {
 		setOpenJobId(openJobId === jobId ? null : jobId);
 	};
 

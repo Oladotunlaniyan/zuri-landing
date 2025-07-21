@@ -11,7 +11,7 @@ import { usePreviousUrlContext } from "../context/PreviousUrlContext";
 // Animation variants
 const fadeIn = {
 	hidden: { opacity: 0, y: 20 },
-	visible: (custom) => ({
+	visible: (custom: number) => ({
 		opacity: 1,
 		y: 0,
 		transition: {
@@ -33,15 +33,26 @@ const staggerContainer = {
 	},
 };
 
+type Product = {
+    logo: string;
+    title: string;
+    description: string;
+    ctaText: string;
+    customStyles: string;
+};
+
+type ProductCardProps = Product & {
+    index: number;
+};
+
 // Card component for products
 const ProductCard = ({
 	logo,
 	title,
 	description,
-	ctaText,
 	customStyles,
 	index,
-}) => {
+}: ProductCardProps) => {
 	const { isDarkMode } = useThemeContext();
 
 	return (

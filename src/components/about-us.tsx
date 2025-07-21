@@ -1,13 +1,17 @@
-import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Moon, Sun, ChevronDown, Code, Users, Globe, Zap, ArrowLeft } from "lucide-react";
-import { ScrollProgress } from "./eldoraui/scrollprogress";
+import { Code, Users, Globe, Zap, ArrowLeft } from "lucide-react";
 import Footer from "./footer";
-import logo from "../assets/logo.png";
 import { Link } from "react-router";
 import Header from "./header";
 import { useThemeContext } from "../context/ThemeContext";
 import { usePreviousUrlContext } from "../context/PreviousUrlContext";
+
+type FeatureCardProps = {
+    icon: React.ComponentType<{ size?: number }>;
+    title: string;
+    description: string;
+    isDarkMode: boolean;
+};
 
 // Animation variants
 const fadeIn = {
@@ -30,7 +34,7 @@ const staggerContainer = {
 };
 
 // Feature component for core values or principles
-const FeatureCard = ({ icon: Icon, title, description, isDarkMode }) => (
+const FeatureCard = ({ icon: Icon, title, description, isDarkMode }: FeatureCardProps) => (
 	<motion.div
 		variants={fadeIn}
 		whileHover={{ scale: 1.03 }}
@@ -66,31 +70,31 @@ export default function AboutUs() {
 
 	// Core values/principles data
 	const features = [
-		{
-			icon: Code,
-			title: "Meaningful Innovation",
-			description:
-				"We build things that are meaningful, beautiful, and useful. Every product we create is designed to move the world forward.",
-		},
-		{
-			icon: Users,
-			title: "Independent Leadership",
-			description:
-				"Each venture is independently led by the best minds we can find, giving them the freedom to operate with clarity and purpose.",
-		},
-		{
-			icon: Globe,
-			title: "Bold Exploration",
-			description:
-				"We explore industries where we can make a meaningful difference, bringing the zuri.corp philosophy to bold new spaces.",
-		},
-		{
-			icon: Zap,
-			title: "Lasting Impact",
-			description:
-				"This isn't just about business. It's about making things that last and solving real problems that impact people's lives.",
-		},
-	];
+    {
+        icon: Code as React.ComponentType<{ size?: number }>,
+        title: "Meaningful Innovation",
+        description:
+            "We build things that are meaningful, beautiful, and useful. Every product we create is designed to move the world forward.",
+    },
+    {
+        icon: Users as React.ComponentType<{ size?: number }>,
+        title: "Independent Leadership",
+        description:
+            "Each venture is independently led by the best minds we can find, giving them the freedom to operate with clarity and purpose.",
+    },
+    {
+        icon: Globe as React.ComponentType<{ size?: number }>,
+        title: "Bold Exploration",
+        description:
+            "We explore industries where we can make a meaningful difference, bringing the zuri.corp philosophy to bold new spaces.",
+    },
+    {
+        icon: Zap as React.ComponentType<{ size?: number }>,
+        title: "Lasting Impact",
+        description:
+            "This isn't just about business. It's about making things that last and solving real problems that impact people's lives.",
+    },
+];
 
 	return (
 		<div>
