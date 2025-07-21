@@ -55,10 +55,10 @@ function Home() {
   }, [])
 
   return (
-    <div className={`min-h-screen transition-colors duration-500 ${isDarkMode ? "bg-gray-800" : "bg-white"}`}>
+    <div className={`min-h-screen transition-colors duration-500 ${isDarkMode ? "bg-[#0C0C16]/90" : "bg-white"}`}>
       <Header />
 
-      <main className="container relative z-10 px-4 pt-3 pb-12 mx-auto sm:px-6 sm:pt-4">
+      <main className="container relative z-10 px-4 pt-16 pb-12 mx-auto sm:px-6">
         <div
           id="hero-section"
           className={`flex flex-col text-left max-w-4xl transition-all duration-1000 transform ${

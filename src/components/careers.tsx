@@ -184,7 +184,7 @@ export default function Careers() {
 	return (
 		<div
 			className={`min-h-screen transition-colors duration-500 ${
-				isDarkMode ? "bg-black" : "bg-gray-50"
+				isDarkMode ? "bg-[#0C0C16]/90" : "bg-gray-50"
 			}`}
 		>
 			<Header />
@@ -192,7 +192,7 @@ export default function Careers() {
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
 				transition={{ duration: 0.5 }}
-				className="container px-4 pt-4 mx-auto sm:px-6 sm:pt-6"
+				className="container px-4 pt-12 mx-auto sm:px-6"
 			>
 				<Link to={`${previousUrl}`}>
 					<motion.div

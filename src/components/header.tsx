@@ -15,8 +15,8 @@ export default function Header() {
 
 			{/* Navigation */}
 			<nav
-				className={`fixed top-4 left-1/2 transform -translate-x-1/2 z-50 max-w-xl w-[90vw] sm:w-[550px] px-2 sm:px-6 ${
-					isDarkMode ? "bg-gray-800/80" : "bg-white/80"
+				className={`fixed top-4 left-1/2 transform -translate-x-1/2 z-[100] max-w-xl w-[90vw] sm:w-[550px] px-2 sm:px-6 ${
+					isDarkMode ? "bg-[#0C0C16]/90" : "bg-white/80"
 				} backdrop-blur-sm border border-white/10 rounded-2xl py-3 md:py-2 shadow-lg`}
 			>
 				<div className="flex items-center justify-between">
@@ -32,7 +32,7 @@ export default function Header() {
 
 					<div className="items-center hidden space-x-4 md:block">
 						<Link
-							to="/products"
+							to="/about-us"
 							className={`text-sm transition-colors duration-300 ${
 								isDarkMode
 									? "text-gray-200 hover:text-gray-100"
@@ -42,7 +42,7 @@ export default function Header() {
 							About
 						</Link>
 						<Link
-							to="/about"
+							to="/careers"
 							className={`text-sm transition-colors duration-300 ${
 								isDarkMode
 									? "text-gray-200 hover:text-gray-100"
@@ -52,7 +52,7 @@ export default function Header() {
 							Careers
 						</Link>
 						<Link
-							to="/contact"
+							to="/products"
 							className={`text-sm transition-colors duration-300 ${
 								isDarkMode
 									? "text-gray-200 hover:text-gray-100"
