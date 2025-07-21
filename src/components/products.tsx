@@ -11,7 +11,7 @@ import { usePreviousUrlContext } from "../context/PreviousUrlContext";
 // Animation variants
 const fadeIn = {
 	hidden: { opacity: 0, y: 20 },
-	visible: (custom) => ({
+	visible: (custom: number) => ({
 		opacity: 1,
 		y: 0,
 		transition: {
@@ -33,15 +33,26 @@ const staggerContainer = {
 	},
 };
 
+type Product = {
+    logo: string;
+    title: string;
+    description: string;
+    ctaText: string;
+    customStyles: string;
+};
+
+type ProductCardProps = Product & {
+    index: number;
+};
+
 // Card component for products
 const ProductCard = ({
 	logo,
 	title,
 	description,
-	ctaText,
 	customStyles,
 	index,
-}) => {
+}: ProductCardProps) => {
 	const { isDarkMode } = useThemeContext();
 
 	return (
@@ -136,7 +147,7 @@ export default function Products() {
 	return (
 		<div
 			className={`min-h-screen transition-colors duration-500 ${
-				isDarkMode ? "bg-black" : "bg-gray-50"
+				isDarkMode ? "bg-[#0C0C16]/90" : "bg-gray-50"
 			}`}
 		>
 			<Header />
@@ -145,7 +156,7 @@ export default function Products() {
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
 				transition={{ duration: 0.5 }}
-				className="container px-4 pt-4 mx-auto sm:px-6 sm:pt-6"
+				className="container px-4 pt-10 mx-auto sm:px-6"
 			>
 				<Link to={`${previousUrl}`}>
 					<motion.div
