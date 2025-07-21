@@ -1,15 +1,15 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { ArrowRight } from "lucide-react"
-import sign from "../assets/signature.png"
-import sign2 from "../assets/signature2.png"
-import pine from "../assets/pinelogo.png"
-import findr from "../assets/findrlogo.png"
-import MorphingText from "./eldoraui/morphingtext"
-import Footer from "./footer"
-import Header from "./header"
-import { useThemeContext } from "../context/ThemeContext"
+import { useState, useEffect } from "react";
+import { ArrowRight } from "lucide-react";
+import sign from "../assets/signature.png";
+import sign2 from "../assets/signature2.png";
+import pine from "../assets/pinelogo.png";
+import findr from "../assets/findrlogo.png";
+import MorphingText from "./eldoraui/morphingtext";
+import Footer from "./footer";
+import Header from "./header";
+import { useThemeContext } from "../context/ThemeContext";
 
 function Home() {
   const { isDarkMode } = useThemeContext()
@@ -55,7 +55,7 @@ function Home() {
   }, [])
 
   return (
-    <div className={`min-h-screen transition-colors duration-500 ${isDarkMode ? "bg-gray-800" : "bg-gray-900"}`}>
+    <div className={`min-h-screen transition-colors duration-500 ${isDarkMode ? "bg-gray-800" : "bg-white"}`}>
       <Header />
 
       <main className="container relative z-10 px-4 pt-3 pb-12 mx-auto sm:px-6 sm:pt-4">

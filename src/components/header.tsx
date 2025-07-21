@@ -16,7 +16,7 @@ export default function Header() {
 			{/* Navigation */}
 			<nav
 				className={`fixed top-4 left-1/2 transform -translate-x-1/2 z-50 max-w-xl w-[90vw] sm:w-[550px] px-2 sm:px-6 ${
-					isDarkMode ? "bg-gray-800/80" : "bg-gray-900/80"
+					isDarkMode ? "bg-gray-800/80" : "bg-white/80"
 				} backdrop-blur-sm border border-white/10 rounded-2xl py-3 md:py-2 shadow-lg`}
 			>
 				<div className="flex items-center justify-between">
